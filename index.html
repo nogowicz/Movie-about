@@ -3,7 +3,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style2.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <link rel="stylesheet" href="CSS/style.css" type="text/css" />
     <script src="JS/app.js"></script>
     <title>Projekt Końcowy</title>
 </head>
@@ -24,7 +27,7 @@
       
           <div class="navbar-menu" id="open-navbar1">
             <ul class="navbar-nav">
-              <li  class="btn"><a href="#">
+              <li  class="btn"><a href="index.html">
                 <span>S</span><span>T</span><span>R</span><span>O</span><span>N</span><span>A</span><span>&nbsp</span><span>G</span><span>Ł</span><span>Ó</span><span>W</span><span>N</span><span>A</span></a></li>
                 <li class="btn">
                 <a href="#"">
@@ -32,8 +35,8 @@
               </li>
               <li  class="btn"><a href="#">
                 <span>G</span><span>A</span><span>L</span><span>E</span><span>R</span><span>I</span><span>A</span><span>&nbsp</span><span>Z</span><span>D</span><span>J</span><span>Ę</span><span>Ć</span></a></li>
-              <li  class="btn"><a href="#">
-                <span>K</span><span>O</span><span>N</span><span>T</span><span>A</span><span>K</span><span>T</span></a></li>
+              <li  class="btn"><a href="fight.html">
+                <span>W</span><span>A</span><span>L</span><span>K</span><span>A</span><span>&nbsp</span><span>F</span><span>I</span><span>L</span><span>M</span><span>Ó</span><span>W</span></a></li>
 
             </ul>
           </div>
@@ -41,7 +44,7 @@
       </nav>
 
       <main>
-        <section class="section-one">
+        <section>
             <div class="text">
             </br>
                 <h1>Co ciekawego słychać w świecie kina?</h1></br></br>
@@ -57,20 +60,22 @@
                 </div>
             </div>
         
-            
-            <div class="imageSlider">
-                <div class="image-container">
-                  <img src="ZDJECIA/obraz1.JPG" id="content1" class="active">
-                  <!-- <img src="ZDJECIA/obraz2.JPG" id="content2">
-                  <img src="ZDJECIA/obraz3.JPG" id="content3">
-                  <img src="ZDJECIA/obraz4.JPG" id="content4"> -->
-                </div>
+            <imageSlider>
+              <div class="image-container">
+                <img src="ZDJECIA/obraz1.JPG" id="content1" class="active">
+                <img src="ZDJECIA/obraz2.JPG" id="content2">
+                <img src="ZDJECIA/obraz3.JPG" id="content3">
+                <img src="ZDJECIA/obraz4.JPG" id="content4">
+              </div>
 
 
-              <button id="prev" onclick="prev()"> &lt; </button>
-              <button id="next" onclick="next()"> &gt; </button>
+            <button id="prev" onclick="prev()"> &lt; </button>
+            <button id="next" onclick="next()"> &gt; </button>
+            </imageSlider>
+            <!-- <div class="imageSlider">
+               
 
-            </div>
+            </div> -->
         
           
         </section>

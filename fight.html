@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"/>
+        <script src="JS/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+        <title>Projekt Końcowy</title>
+    </head>
+    <body>
+        
+        <nav class="navbar">
+            <div class="container">
+          
+              <div class="navbar-header">
+                <button class="navbar-toggler" data-toggle="open-navbar1">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <a href="#">
+                  <h4>Movie<span>about</span></h4>
+                </a>
+              </div>
+          
+              <div class="navbar-menu" id="open-navbar1">
+                <ul class="navbar-nav">
+                  <li  class="btn"><a href="index.html">
+                    <span>S</span><span>T</span><span>R</span><span>O</span><span>N</span><span>A</span><span>&nbsp</span><span>G</span><span>Ł</span><span>Ó</span><span>W</span><span>N</span><span>A</span></a></li>
+                    <li class="btn">
+                    <a href="#"">
+                        <span>H</span><span>I</span><span>S</span><span>T</span><span>O</span><span>R</span><span>I</span><span>A</span>
+                  </li>
+                  <li  class="btn"><a href="#">
+                    <span>G</span><span>A</span><span>L</span><span>E</span><span>R</span><span>I</span><span>A</span><span>&nbsp</span><span>Z</span><span>D</span><span>J</span><span>Ę</span><span>Ć</span></a></li>
+                  <li  class="btn"><a href="fight.html">
+                    <span>W</span><span>A</span><span>L</span><span>K</span><span>A</span><span>&nbsp</span><span>F</span><span>I</span><span>L</span><span>M</span><span>Ó</span><span>W</span></a></li>
+    
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div id="left-autocomplete"></div>
+                <div id="left-summary"></div>
+              </div>
+      
+              <div class="column">
+                <div id="right-autocomplete"></div>
+                <div id="right-summary"></div>
+              </div>
+            </div>
+      
+            <div class="column is-half notification is-primary tutorial">
+              <h1 class="title">Wszysukaj Filmy Po Obu Stronach</h1>
+              <p class="subtitle">Powiemy ci który jest najlepszy!</p>
+            </div>
+          </div>
+          <script src="utils.js"></script>
+          <script src="autocomplete.js"></script>
+          <script src="index.js"></script>
+    
+    
+</body>
+</html>
