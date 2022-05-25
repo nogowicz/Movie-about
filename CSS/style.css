@@ -15,7 +15,7 @@ a {
     text-decoration: none;
 }
 
-.container {
+.nav-container {
     width: 1170px;
     position: relative;
     margin-left: auto;
@@ -26,7 +26,7 @@ a {
 
 /*Nav bar*/
 .navbar,
-.navbar > .container {
+.navbar > .nav-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -265,7 +265,7 @@ a {
 /* MAIN */
 
 
-main {
+body > main {
 	flex-grow: 1;
 	padding: 1rem;
 
@@ -273,7 +273,7 @@ main {
 	justify-content: center;
 }
 
-main > section {
+body > main > section {
 	flex-grow: 1;
     background: #eceef3;
     border-bottom-left-radius: 1em;
@@ -286,15 +286,19 @@ main > section {
 }
 
 main > section > div {
-    flex-grow: 1;
 }
 
 main > section h1 {
     text-align: center;
+    font-family: sans-serif;
+    font-size: 2em;
+    
 }
 
 main > section > div {
     text-align: center;
+    font-family: sans-serif;
+    font-size: 1,5em;
 }
 
 
@@ -302,35 +306,83 @@ main > section > a {
     color: #000;
     text-align: end;
     margin-right: 1em;
+    flex-basis: 16em;
+	padding: 1em;
+  margin-left: 20px;
+    
 }
 
 
 main > aside {
 	flex-basis: 16em;
 	padding: 1em;
-    margin-left: 20px;
-    background: #66f;
-    color: #000;
-    border-bottom-left-radius: 1em;
+  margin-left: 20px;
+  background: #66f;
+  color: #000;
+  border-bottom-left-radius: 1em;
 	border-bottom-right-radius: 1em;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
 
 }
 
 main > aside a {
     color: #000;
+    font-family: sans-serif;
+}
+.text > div > left{
+  float: left;
+  width: 45%;
+  flex: 50%;
+}
+
+.text > div > right{
+  float: right;
+  width: 45%;
+  flex: 50%;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+h3 {
+  font-weight: 900;
+}
+
+h4 {
+  text-align: center;
 }
 
 h5 {
     font-weight: normal;
+}
+h6 {
+  font-weight: lighter;
+  font-size: small;
 }
 
 /* FOOTER */
 
 
 footer {
-	background-color: #eceef3;
+  width: 100%;
+  bottom: 0;
+  color: white;
+  background-color: #202020;
+  padding: 10px;
+}
+
+.absoluteFooter{
+  width: 100%;
+  bottom: 0;
+  color: white;
+  background-color: #202020;
+  padding: 10px;
+  position: absolute;
 }
 
 footer > p {
@@ -350,8 +402,7 @@ main > section > imageSlider{
     width: 500px;
     height: 350px;
     position: relative;
-    transform: translate(-50%, -50%);
-    text-align: end;
+    text-align: center;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
@@ -457,4 +508,8 @@ figure .image img {
 
 .container{
   text-align: center;
+}
+
+.notification.is-primary {
+  background-color: #66f;
 }

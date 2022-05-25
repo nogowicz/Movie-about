@@ -31,6 +31,7 @@ createAutoComplete({
 
 	onOptionSelect(movie) {
 		document.querySelector('.tutorial').classList.add('is-hidden');
+		document.querySelector('footer').classList.remove('absoluteFooter');
 		onMovieSelect(movie, document.querySelector('#left-summary'), 'left');
 	}
 });
