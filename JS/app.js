@@ -102,3 +102,14 @@ function deactivate(num) {
 setInterval(function() {
 	next();
 }, 5000);
+
+let counts = setInterval(updated);
+let upto = 19478100;
+function updated() {
+	var count = document.getElementById('counter');
+	upto += 100;
+	count.innerHTML = upto;
+	if (upto === 19500000) {
+		clearInterval(counts);
+	}
+}
