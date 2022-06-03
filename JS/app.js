@@ -65,7 +65,7 @@
 const images = document.querySelectorAll('.image-container img');
 
 let i = 0; // current slide
-let j = 4; // total slides
+let j = 9; // total slides
 
 function next() {
 	document.getElementById('content' + (i + 1)).classList.remove('active');
@@ -98,3 +98,7 @@ function indicator(num) {
 function deactivate(num) {
 	document.querySelector('.dot-container button:nth-child(' + num + ')').style.backgroundColor = 'transparent';
 }
+
+setInterval(function() {
+	next();
+}, 5000);
