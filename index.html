@@ -1,169 +1,170 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
     <link rel="stylesheet" href="CSS/style.css" type="text/css" />
     <script src="JS/app.js"></script>
     <title>Projekt Końcowy</title>
 </head>
+
+
 <body>
-  <nav class="navbar">
-    <div class="navbar-header">
-      <a href="index.html">
-        <h4>Movie<span>about</span></h4>
-      </a>
-    </div>
-    <a href="#" class="toggle-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
-    <div class="navbar-links">
-        <ul>
-          <li  class="btn">
+    <nav class="navbar">
+        <div class="navbar-header">
             <a href="index.html">
-            <span>S</span><span>T</span><span>R</span><span>O</span><span>N</span><span>A</span><span>&nbsp</span><span>G</span><span>Ł</span><span>Ó</span><span>W</span><span>N</span><span>A</span></a></li>
-            <li class="btn">
-            <a href="historia.html">
-                <span>H</span><span>I</span><span>S</span><span>T</span><span>O</span><span>R</span><span>I</span><span>A</span></a></li>
-          <li  class="btn">
-            <a href="formularz.html">
-            <span>D</span><span>O</span><span>D</span><span>A</span><span>J</span><span>&nbsp</span><span>W</span><span>P</span><span>I</span><span>S</span></a></li>
-          <li  class="btn">
-            <a href="fight.html">
-            <span>W</span><span>A</span><span>L</span><span>K</span><span>A</span><span>&nbsp</span><span>F</span><span>I</span><span>L</span><span>M</span><span>Ó</span><span>W</span></a></li>
+                <h4>Movie<span>about</span></h4>
+            </a>
+        </div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li class="btn">
+                    <a href="index.html">
+                        <span>S</span><span>T</span><span>R</span><span>O</span><span>N</span><span>A</span><span>&nbsp;</span><span>G</span><span>Ł</span><span>Ó</span><span>W</span><span>N</span><span>A</span></a>
+                </li>
+                <li class="btn">
+                    <a href="historia.html">
+                        <span>H</span><span>I</span><span>S</span><span>T</span><span>O</span><span>R</span><span>I</span><span>A</span></a>
+                </li>
+                <li class="btn">
+                    <a href="formularz.html">
+                        <span>D</span><span>O</span><span>D</span><span>A</span><span>J</span><span>&nbsp;</span><span>W</span><span>P</span><span>I</span><span>S</span></a>
+                </li>
+                <li class="btn">
+                    <a href="fight.html">
+                        <span>W</span><span>A</span><span>L</span><span>K</span><span>A</span><span>&nbsp;</span><span>F</span><span>I</span><span>L</span><span>M</span><span>Ó</span><span>W</span></a>
+                </li>
 
-        </ul>
-      </div>
-    
-    <script>
-      const toggleButton = document.getElementsByClassName('toggle-button')[0]
-      const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+            </ul>
+        </div>
 
-      toggleButton.addEventListener('click', () => {
-      navbarLinks.classList.toggle('active')
-})
-    </script>
-  </nav>
+        <script>
+            const toggleButton = document.getElementsByClassName('toggle-button')[0]
+            const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-      <main>
+            toggleButton.addEventListener('click', () => {
+                navbarLinks.classList.toggle('active')
+            })
+        </script>
+    </nav>
+
+    <main>
         <section>
             <div class="text">
-            <br>
+                <br>
                 <h1>Co ciekawego słychać w świecie kina?</h1><br><br>
                 <div>
-                  W ciężkiej erze oglądania wszystkiego w internecie może się wydawać, że kino to przeżytek.<br><br>
-
-                  Nic bardziej mylnego! Kinematografia dalej żyje i ma się dobrze, ponad to podniesiony standard jakości poprzez dużą 
-                  rywalizację sprawia, że doznania na dużym ekranie są jeszcze bardziej niesamowite.<br><br>
-
-                  Dzięki tej stronie znajdziesz idealny film kinowy dla siebie.
-                  Recenzje najpoważniejszych krytyków filmowych jak i zwykłych amatorów kina wraz ze zdjęciami promotorskimi
-                  znajdziesz w jednym miejscu, właśnie na tej stronie.<br><br>
-                </div> 
+                    W ciężkiej erze oglądania wszystkiego w internecie może się wydawać, że kino to przeżytek.<br><br> Nic bardziej mylnego! Kinematografia dalej żyje i ma się dobrze, ponad to podniesiony standard jakości poprzez dużą rywalizację sprawia,
+                    że doznania na dużym ekranie są jeszcze bardziej niesamowite.<br><br> Dzięki tej stronie znajdziesz idealny film kinowy dla siebie. Recenzje najpoważniejszych krytyków filmowych jak i zwykłych amatorów kina wraz ze zdjęciami promotorskimi
+                    znajdziesz w jednym miejscu, właśnie na tej stronie.<br><br>
+                </div>
             </div>
-        
-            <imageSlider style="margin:  0 auto">
-              <div class="image-container">
-                <img src="ZDJECIA/forrestgump.jpg" id="content1" alt="" class="active">
-                <img src="ZDJECIA/godfather.jpg" id="content2" alt="">
-                <img src="ZDJECIA/harrypotter.jpg" id="content3" alt="">
-                <img src="ZDJECIA/incepcja.jpg" id="content4" alt="">
-                <img src="ZDJECIA/matrix.jpg" id="content5" alt="">
-                <img src="ZDJECIA/mrocznyrycerz.jpg" id="content6" alt="">
-                <img src="ZDJECIA/powrotdoprzyszlosci.jpg" id="content7" alt="">
-                <img src="ZDJECIA/pulpfiction.jpg" id="content8" alt="">
-                <img src="ZDJECIA/shawsshank.jpg" id="content9" alt="">
-              </div>
+
+            <div class="slider" style="margin:  0 auto">
+                <div class="image-container">
+                    <img src="ZDJECIA/forrestgump.jpg" id="content1" alt="" class="active">
+                    <img src="ZDJECIA/godfather.jpg" id="content2" alt="">
+                    <img src="ZDJECIA/harrypotter.jpg" id="content3" alt="">
+                    <img src="ZDJECIA/incepcja.jpg" id="content4" alt="">
+                    <img src="ZDJECIA/matrix.jpg" id="content5" alt="">
+                    <img src="ZDJECIA/mrocznyrycerz.jpg" id="content6" alt="">
+                    <img src="ZDJECIA/powrotdoprzyszlosci.jpg" id="content7" alt="">
+                    <img src="ZDJECIA/pulpfiction.jpg" id="content8" alt="">
+                    <img src="ZDJECIA/shawsshank.jpg" id="content9" alt="">
+                </div>
 
 
-            <button id="prev" onclick="prev()"> &lt; </button>
-            <button id="next" onclick="next()"> &gt; </button>
-            </imageSlider>
-          <br>
-        <br>
-      <br>
-            <counter id="counter"></counter>
+                <button id="prev" onclick="prev()"> &lt; </button>
+                <button id="next" onclick="next()"> &gt; </button>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="counter" id="counter"></div>
 
             <script>
-              let counts = setInterval(updated);
-              let upto = 19478100;
+                let counts = setInterval(updated);
+                let upto = 19478100;
 
-              function updated() {
-                var count = document.getElementById('counter');
-                upto += 100;
-                count.innerHTML = upto;
-                if (count.innerHTML == 19500000) {
-                  clearInterval(counts);
+                function updated() {
+                    var count = document.getElementById('counter');
+                    upto += 100;
+                    count.innerHTML = upto;
+                    if (count.innerHTML == 19500000) {
+                        clearInterval(counts);
+                    }
                 }
-              }
             </script>
             <h1>Tyle osób odwiedziło kino w 2020</h1><br><br>
-        <div>
-              Mimo ciężkiego roku i obostrzeń branża kinowa przetrwała.
-              Jednak liczba seansów zmniejszyła się o połowę.
-        </div>
-      <br><br>
+            <div>
+                Mimo ciężkiego roku i obostrzeń branża kinowa przetrwała. Jednak liczba seansów zmniejszyła się o połowę.
+            </div>
+            <br><br>
         </section>
 
         <aside>
-          <h2>Ostatnie wpisy:</h2>
-          <br>
+            <h2>Ostatnie wpisy:</h2>
+            <br>
             <article>
                 <h3>Nowy Doctor Strange już 6 maja!</h3>
                 <h6>8 kwietnia 2022</h6>
-                    <h5>Doctor Strange powraca w kolejnym hitowym filmie. Multiwersum na pewno nas zszokuje przedewszystkim widowiskowymi efektami specjalnymi, ale także nowymi (lub starymi) postaciami z uniwersum Marvela. Pierwszy taki mroczny film od MCU to coś co trzeba zobaczyć [...]</h5>
-                    
+                <h5>Doctor Strange powraca w kolejnym hitowym filmie. Multiwersum na pewno nas zszokuje przedewszystkim widowiskowymi efektami specjalnymi, ale także nowymi (lub starymi) postaciami z uniwersum Marvela. Pierwszy taki mroczny film od MCU to
+                    coś co trzeba zobaczyć [...]</h5>
+
             </article>
-            
+
             <article>
-              <br>
-              <h3>Nasze magiczne Encanto</h3>
-              <h6>5 kwietnia 2022</h6>
-                  
-                      <h5>"Nasze magiczne Encanto" to pozycja[...]</h5>
-                  
-          </article>
+                <br>
+                <h3>Nasze magiczne Encanto</h3>
+                <h6>5 kwietnia 2022</h6>
 
-          <article>
-          <br>
-            <h3>Luca</h3>
-            <h6>4 kwietnia 2022</h6>
-                
-                    <h5>Czym właściwie jest Luca? Mówiąc najprościej, jest to [...]</h5>
-                
-        </article>
+                <h5>"Nasze magiczne Encanto" to pozycja[...]</h5>
 
-        <article>
-        <br>
-          <h3>Dowiedz się, jak wytresować swojego smoka.</h3>
-          <h6>3 kwietnia 2022</h6>
-              
-                  <h5>Czkawka to nordycki nastolatek z wyspy Berk, gdzie walka ze smokami jest sposobem
-                    na życie. Jego postępowe poglądy i dziwne humory sprawiają, że jest odmieńcem, mimio że jego ojciec
-                    jest wodzem klanu [...]</h5>
-                  
-              
-      </article>
+            </article>
 
-      <article>
-      <br>
-        <h3>Raya i ostatni smok</h3>
-        <h6>1 kwietnia 2022</h6>
-            
-                <h5>Raya i ostatni smok to historia młodej dziewczyny [...]</h5></li>
-            
-    </article>
-                
-                
+            <article>
+                <br>
+                <h3>Luca</h3>
+                <h6>4 kwietnia 2022</h6>
+
+                <h5>Czym właściwie jest Luca? Mówiąc najprościej, jest to [...]</h5>
+
+            </article>
+
+            <article>
+                <br>
+                <h3>Dowiedz się, jak wytresować swojego smoka.</h3>
+                <h6>3 kwietnia 2022</h6>
+
+                <h5>Czkawka to nordycki nastolatek z wyspy Berk, gdzie walka ze smokami jest sposobem na życie. Jego postępowe poglądy i dziwne humory sprawiają, że jest odmieńcem, mimio że jego ojciec jest wodzem klanu [...]</h5>
+
+
+            </article>
+
+            <article>
+                <br>
+                <h3>Raya i ostatni smok</h3>
+                <h6>1 kwietnia 2022</h6>
+
+                <h5>Raya i ostatni smok to historia młodej dziewczyny [...]</h5>
+
+            </article>
+
+
         </aside>
     </main>
-    
+
     <footer>&copy; Bartek Noga</footer>
-    
+
 </body>
+
 </html>

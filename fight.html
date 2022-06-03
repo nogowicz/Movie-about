@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"/>
-        <link rel="stylesheet" href="CSS/style.css" type="text/css" />
-        <script src="JS/app.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
-        <title>Movieabout</title>
-      </head>
-      <body style="display: inline;">
-        <body>
-          <nav class="navbar">
-            <div class="navbar-header">
-              <a href="index.html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+    <script src="JS/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <title>Movieabout</title>
+</head>
+
+<body style="display: inline;">
+
+    <nav class="navbar">
+        <div class="navbar-header">
+            <a href="index.html">
                 <h4>Movie<span>about</span></h4>
-              </a>
-            </div>
-            <a href="#" class="toggle-button">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
             </a>
-            <div class="navbar-links">
-                <ul>
-                  <li  class="btn">
+        </div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li class="btn">
                     <a href="index.html">
-                    <span>S</span><span>T</span><span>R</span><span>O</span><span>N</span><span>A</span><span>&nbsp</span><span>G</span><span>Ł</span><span>Ó</span><span>W</span><span>N</span><span>A</span></a></li>
-                    <li class="btn">
-                    <a href="historia.html"">
-                        <span>H</span><span>I</span><span>S</span><span>T</span><span>O</span><span>R</span><span>I</span><span>A</span>
-                  </li>
-                  <li  class="btn">
+                        <span>S</span><span>T</span><span>R</span><span>O</span><span>N</span><span>A</span><span>&nbsp;</span><span>G</span><span>Ł</span><span>Ó</span><span>W</span><span>N</span><span>A</span></a>
+                </li>
+                <li class="btn">
+                    <a href="historia.html">
+                        <span>H</span><span>I</span><span>S</span><span>T</span><span>O</span><span>R</span><span>I</span><span>A</span></a>
+                </li>
+                <li class="btn">
                     <a href="formularz.html">
-                    <span>D</span><span>O</span><span>D</span><span>A</span><span>J</span><span>&nbsp</span><span>W</span><span>P</span><span>I</span><span>S</span></a></li>
-                  <li  class="btn">
+                        <span>D</span><span>O</span><span>D</span><span>A</span><span>J</span><span>&nbsp;</span><span>W</span><span>P</span><span>I</span><span>S</span></a>
+                </li>
+                <li class="btn">
                     <a href="fight.html">
-                    <span>W</span><span>A</span><span>L</span><span>K</span><span>A</span><span>&nbsp</span><span>F</span><span>I</span><span>L</span><span>M</span><span>Ó</span><span>W</span></a></li>
-        
-                </ul>
-              </div>
-            </div>
-            <script>
-              const toggleButton = document.getElementsByClassName('toggle-button')[0]
-              const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-        
-              toggleButton.addEventListener('click', () => {
-              navbarLinks.classList.toggle('active')
-        })
-            </script>
-          </nav>
-          <div class="container">
-            <div class="columns">
-              <div class="column">
+                        <span>W</span><span>A</span><span>L</span><span>K</span><span>A</span><span>&nbsp;</span><span>F</span><span>I</span><span>L</span><span>M</span><span>Ó</span><span>W</span></a>
+                </li>
+
+            </ul>
+        </div>
+
+        <script>
+            const toggleButton = document.getElementsByClassName('toggle-button')[0]
+            const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+            toggleButton.addEventListener('click', () => {
+                navbarLinks.classList.toggle('active')
+            })
+        </script>
+    </nav>
+
+    <div class="container">
+        <div class="columns">
+            <div class="column">
                 <div id="left-autocomplete"></div>
                 <div id="left-summary"></div>
-              </div>
-      
-              <div class="column">
+            </div>
+
+            <div class="column">
                 <div id="right-autocomplete"></div>
                 <div id="right-summary"></div>
-              </div>
             </div>
-      
-            <div class="column is-half notification is-primary tutorial">
-              <h1 class="title">Wszysukaj Filmy Po Obu Stronach</h1>
-              <p class="subtitle">Powiemy ci który jest najlepszy!</p>
-            </div>
-          </div>
-          <script src="JS/utils.js"></script>
-          <script src="JS/autocomplete.js"></script>
-          <script src="JS/index.js"></script>
-    
-          <footer class="absoluteFooter">&copy; Bartek Noga</footer>
-    
+        </div>
+
+        <div class="column is-half notification is-primary tutorial">
+            <h1 class="title">Wszysukaj Filmy Po Obu Stronach</h1>
+            <p class="subtitle">Powiemy ci który jest najlepszy!</p>
+        </div>
+    </div>
+    <script src="JS/utils.js"></script>
+    <script src="JS/autocomplete.js"></script>
+    <script src="JS/index.js"></script>
+
+    <footer class="absoluteFooter">&copy; Bartek Noga</footer>
+
 </body>
+
 </html>

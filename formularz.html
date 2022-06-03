@@ -1,151 +1,158 @@
+<!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"/> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
     <link rel="stylesheet" href="CSS/style.css" type="text/css" />
     <script src="JS/formularz.js"></script>
     <title>Movieabout</title>
 </head>
+
 <body>
-  <body>
+
     <nav class="navbar">
-      <div class="navbar-header">
-        <a href="index.html">
-          <h4>Movie<span>about</span></h4>
-        </a>
-      </div>
-      <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <div class="navbar-links">
-          <ul>
-            <li  class="btn">
-              <a href="index.html">
-              <span>S</span><span>T</span><span>R</span><span>O</span><span>N</span><span>A</span><span>&nbsp</span><span>G</span><span>Ł</span><span>Ó</span><span>W</span><span>N</span><span>A</span></a></li>
-              <li class="btn">
-              <a href="historia.html"">
-                  <span>H</span><span>I</span><span>S</span><span>T</span><span>O</span><span>R</span><span>I</span><span>A</span>
-            </li>
-            <li  class="btn">
-              <a href="formularz.html">
-              <span>D</span><span>O</span><span>D</span><span>A</span><span>J</span><span>&nbsp</span><span>W</span><span>P</span><span>I</span><span>S</span></a></li>
-            <li  class="btn">
-              <a href="fight.html">
-              <span>W</span><span>A</span><span>L</span><span>K</span><span>A</span><span>&nbsp</span><span>F</span><span>I</span><span>L</span><span>M</span><span>Ó</span><span>W</span></a></li>
-  
-          </ul>
+        <div class="navbar-header">
+            <a href="index.html">
+                <h4>Movie<span>about</span></h4>
+            </a>
         </div>
-      </div>
-      <script>
-        const toggleButton = document.getElementsByClassName('toggle-button')[0]
-        const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-  
-        toggleButton.addEventListener('click', () => {
-        navbarLinks.classList.toggle('active')
-  })
-      </script>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li class="btn">
+                    <a href="index.html">
+                        <span>S</span><span>T</span><span>R</span><span>O</span><span>N</span><span>A</span><span>&nbsp;</span><span>G</span><span>Ł</span><span>Ó</span><span>W</span><span>N</span><span>A</span></a>
+                </li>
+                <li class="btn">
+                    <a href="historia.html">
+                        <span>H</span><span>I</span><span>S</span><span>T</span><span>O</span><span>R</span><span>I</span><span>A</span></a>
+                </li>
+                <li class="btn">
+                    <a href="formularz.html">
+                        <span>D</span><span>O</span><span>D</span><span>A</span><span>J</span><span>&nbsp;</span><span>W</span><span>P</span><span>I</span><span>S</span></a>
+                </li>
+                <li class="btn">
+                    <a href="fight.html">
+                        <span>W</span><span>A</span><span>L</span><span>K</span><span>A</span><span>&nbsp;</span><span>F</span><span>I</span><span>L</span><span>M</span><span>Ó</span><span>W</span></a>
+                </li>
+
+            </ul>
+        </div>
+
+        <script>
+            const toggleButton = document.getElementsByClassName('toggle-button')[0]
+            const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+            toggleButton.addEventListener('click', () => {
+                navbarLinks.classList.toggle('active')
+            })
+        </script>
     </nav>
 
-      <main>
-        <section>
-          <div>
-          </br>
-          <h1>Dodaj wpis</h1></br></br>
-          <form class="form" action="mailto:" method="post">
-            <div class="form_item"> <label for="nick" class="form_label">Podaj nick:</label>
-              <input type="text" class="form_input" name="nick" id="nick" placeholder="Podaj swój nick" required>
-              <span class="form_error">Nazwa użytkownika jest za krótka</span></div>
-             
-              <div class="form_item"> <label for="title" class="form_label">Tytuł wpisu:</label>
-                <input type="text" class="form_input" name="title" id="title" placeholder="Tytuł wpisu" required>
-                <span class="form_error">Tytuł wpisu jest za krótki</span></div>
-               
-                <div class="form_item">
-                  <label for="dataPublikacji" class="form_label"> Data publikacji:</label>
-                  <input type="date" class="form_input form_input--small" name="dataPublikacji" id="dataPublikacji" placeholder="Data publikacji" required>
-                  <span class="form_error">Data nie może być z przeszłości</span>
-                </div>
-             
-                <div class="form_item">
-                  <label for="tresc" class="form_label">Treść wpisu:</label>
-                  <textarea maxlength="500" class="form_input" name="tresc" id="tresc" placeholder="Wpisz tresć wpisu (max. 500 liter)" required></textarea>
-                  <span class="form_error">Treść za krótka</span>
-                </div>
 
-                <input id='anonId' type='checkbox' />
-                <label for='anonId'>
+    <main>
+        <section>
+            <div>
+                <br>
+                <h1>Dodaj wpis</h1><br><br>
+                <form class="form" action="mailto:" method="post">
+                    <div class="form_item"> <label for="nick" class="form_label">Podaj nick:</label>
+                        <input type="text" class="form_input" name="nick" id="nick" placeholder="Podaj swój nick" required>
+                        <span class="form_error">Nazwa użytkownika jest za krótka</span></div>
+
+                    <div class="form_item"> <label for="title" class="form_label">Tytuł wpisu:</label>
+                        <input type="text" class="form_input" name="title" id="title" placeholder="Tytuł wpisu" required>
+                        <span class="form_error">Tytuł wpisu jest za krótki</span></div>
+
+                    <div class="form_item">
+                        <label for="dataPublikacji" class="form_label"> Data publikacji:</label>
+                        <input type="date" class="form_input form_input--small" name="dataPublikacji" id="dataPublikacji" required>
+                        <span class="form_error">Data nie może być z przeszłości</span>
+                    </div>
+
+                    <div class="form_item">
+                        <label for="tresc" class="form_label">Treść wpisu:</label>
+                        <textarea maxlength="500" class="form_input" name="tresc" id="tresc" placeholder="Wpisz tresć wpisu (max. 500 liter)" required></textarea>
+                        <span class="form_error">Treść za krótka</span>
+                    </div>
+
+                    <input id='anonId' type='checkbox' />
+                    <label for='anonId'>
                   <span></span>
                   Post anonimnowy
                   <ins><i>Post anonimnowy</i></ins>
                 </label>
-                        
-          
-            <div class="form_item">
-              <button class="form_btn" onclick="dodaj()" name="send" type="submit">Zatwierdź</button>
+
+
+                    <div class="form_item">
+                        <button class="form_btn" onclick="dodaj()" name="send" type="submit">Zatwierdź</button>
+                    </div>
+                </form>
             </div>
-          </form>
-          </div>
         </section>
 
         <aside>
-          <h2>Ostatnie wpisy:</h2>
-          </br>
+            <h2>Ostatnie wpisy:</h2>
+            <br>
             <article>
                 <h3>Nowy Doctor Strange już 6 maja!</h3>
                 <h6>8 kwietnia 2022</h6>
-                    <h5>Doctor Strange powraca w kolejnym hitowym filmie. Multiwersum na pewno nas zszokuje przedewszystkim widowiskowymi efektami specjalnymi, ale także nowymi (lub starymi) postaciami z uniwersum Marvela. Pierwszy taki mroczny film od MCU to coś co trzeba zobaczyć [...]</h5>
-                    
+                <h5>Doctor Strange powraca w kolejnym hitowym filmie. Multiwersum na pewno nas zszokuje przedewszystkim widowiskowymi efektami specjalnymi, ale także nowymi (lub starymi) postaciami z uniwersum Marvela. Pierwszy taki mroczny film od MCU to
+                    coś co trzeba zobaczyć [...]</h5>
+
             </article>
-            
+
             <article>
-              </br>
-              <h3>Nasze magiczne Encanto</h3>
-              <h6>5 kwietnia 2022</h6>
-                  
-                      <h5>"Nasze magiczne Encanto" to pozycja[...]</h5>
-                  
-          </article>
+                <br>
+                <h3>Nasze magiczne Encanto</h3>
+                <h6>5 kwietnia 2022</h6>
 
-          <article>
-          </br>
-            <h3>Luca</h3>
-            <h6>4 kwietnia 2022</h6>
-                
-                    <h5>Czym właściwie jest Luca? Mówiąc najprościej, jest to [...]</h5>
-                
-        </article>
+                <h5>"Nasze magiczne Encanto" to pozycja[...]</h5>
 
-        <article>
-        </br>
-          <h3>Dowiedz się, jak wytresować swojego smoka.</h3>
-          <h6>3 kwietnia 2022</h6>
-              
-                  <h5>Czkawka to nordycki nastolatek z wyspy Berk, gdzie walka ze smokami jest sposobem
-                    na życie. Jego postępowe poglądy i dziwne humory sprawiają, że jest odmieńcem, mimio że jego ojciec
-                    jest wodzem klanu [...]</h5>
-                  
-              
-      </article>
+            </article>
 
-      <article>
-      </br>
-        <h3>Raya i ostatni smok</h3>
-        <h6>1 kwietnia 2022</h6>
-            
-                <h5>Raya i ostatni smok to historia młodej dziewczyny [...]</h5></li>
-            
-    </article>
-                
-                
+            <article>
+                <br>
+                <h3>Luca</h3>
+                <h6>4 kwietnia 2022</h6>
+
+                <h5>Czym właściwie jest Luca? Mówiąc najprościej, jest to [...]</h5>
+
+            </article>
+
+            <article>
+                <br>
+                <h3>Dowiedz się, jak wytresować swojego smoka.</h3>
+                <h6>3 kwietnia 2022</h6>
+
+                <h5>Czkawka to nordycki nastolatek z wyspy Berk, gdzie walka ze smokami jest sposobem na życie. Jego postępowe poglądy i dziwne humory sprawiają, że jest odmieńcem, mimio że jego ojciec jest wodzem klanu [...]</h5>
+
+
+            </article>
+
+            <article>
+                <br>
+                <h3>Raya i ostatni smok</h3>
+                <h6>1 kwietnia 2022</h6>
+
+                <h5>Raya i ostatni smok to historia młodej dziewczyny [...]</h5>
+
+            </article>
+
+
         </aside>
     </main>
-    
+
     <footer>&copy; Bartek Noga</footer>
 </body>
+
 </html>
