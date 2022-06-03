@@ -2,10 +2,12 @@
 /*All*/
 
 
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
 }
 
 body {
@@ -15,164 +17,159 @@ body {
     flex-direction: column;
     min-height: 100%;
     z-index: 1;
+    min-width: 584px;
 }
 
 a {
     text-decoration: none;
 }
 
-.nav-container {
-    width: 1170px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
 
-  }
+/* Nav Bar */
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+  padding: 1rem 1.15rem;
+  z-index:2;
+  top: 0;
+  border-bottom: 1px solid #eceef3;
+  position: sticky;
 
-/*Nav bar*/
-.navbar,
-.navbar > .nav-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }
 
-.navbar{
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
-    background-color: fff;
-    padding: 1rem 1.15rem;
-    border-bottom: 1px solid #eceef3;
-    position: sticky;
-    top: 0;
-    z-index:2;
+.navbar-header {
+  display: flex;
+  align-items: center;
 }
 
-.navbar .navbar-header {
-    display: flex;
-    align-items: center;
+
+.navbar-header > a {
+  font-weight: 500;
+  color: #3c4250;
 }
 
-.navbar .navbar-header .navbar-toggler {
-    cursor: pointer;
-    border: none;
-    display: none;
-    outline: none;
-}
-
-.navbar .navbar-header .navbar-toggler span{
-    height: 2px;
-    width: 22px;
-    background-color: #929aad;
-    display: block;
-}
-
-.navbar .navbar-header .navbar-toggler span:not(:last-child) {
-    margin-bottom: 0.2rem;
-}
-
-.navbar .navbar-header > a {
-    font-weight: 500;
-    color: #3c4250;
-  }
   
-  
-.navbar .navbar-menu {
-    display: flex;
+.navbar-header > a span {
+  color: #66f;
+}
+
+.navbar .navbar-header h4 {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+
+.navbar-links {
+  display: flex;
     align-items: center;
     flex-basis: auto;
-    /* flex-grow: 1; */
-  }
-
-  
-.navbar .navbar-menu .navbar-nav {
     margin-left: auto;
     flex-direction: row;
     display: flex;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
 
 }
 
-.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
-    list-style: none;
-    position: absolute;
-    top: 150%;
-    left: 0;
-    background-color: #fff;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    min-width: 160px;
-    width: auto;
-    white-space: nowrap;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    z-index: 99999;
-    border-radius: 0.75rem;
-    display: none;
-  }
-    
-  .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
-    color: #0c4250;
-    padding: 0.25rem 1rem;
-    display: block;
+ .navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.toggle-button {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #3c4250;
+  border-radius: 10px;
+}
+
+@media (max-width: 920px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
   }
 
-  .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
-    display: block !important;
+  .toggle-button {
+      display: flex;
   }
 
-  .navbar .navbar-menu .navbar-nav .dropdown > .separator {
-    height: 1px;
-    width: 100%;
-    margin-top: 9px;
-    margin-bottom: 9px;
-    background-color: #eceef3;
+  .navbar-links {
+      display: none;
+      width: 100%;
   }
 
-  .navbar .navbar-dropdown {
-    position: relative;
-  }
-  
-  .navbar .navbar-header > a span {
-    color: #66f;
-  }
-  
-  .navbar .navbar-header h4 {
-    font-weight: 500;
-    font-size: 1.25rem;
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
   }
 
-  /*Nav bar buttons*/
+  .navbar-links ul li {
+      text-align: center;
+  }
 
-  
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+
+}
+
+
+/* Nav Buttons */
+
 .btn{
-    text-decoration: none;
-    padding:0.25rem 1rem;
-    position: relative;
+  text-decoration: none;
+  padding:0.25rem 1rem;
+  position: relative;
 }
 
 .btn::before{
-    content: "";
-    position: absolute;
-    bottom: 0; left: 0;
-    width:100%; height: 0;
-    background-color: #66f;
-    transition: height 0.3s;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0;
+  width:100%; height: 0;
+  background-color: #66f;
+  transition: height 0.3s;
+  z-index: -1;
 }
 
 .btn:hover::before{height: 100%;}
 
 .btn span{
-    display: inline-block;
-    text-transform: uppercase;
-    color: #000;
-    font-family: Arial; font-weight: 600;
-    transition: transform 0.2s;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #000;
+  font-family: Arial; font-weight: 600;
+  transition: transform 0.2s;
 }
 
 .btn span:not(:last-child) { margin-right: 1px;}
@@ -181,52 +178,7 @@ a {
 
 .btn:hover span {color:#fff;}
 
-/*@media*/
 
-@media (max-width: 816px) {
-    .container {
-      display: block;
-    }
-  }
-
-  @media (min-width: 576px) {
-    .container {
-      max-width: 540px;
-    }
-  }
-
-  @media (min-width: 816px) {
-    .container {
-      max-width: 720px;
-    }
-  }
-
-  
-@media (min-width: 816px) {
-    .container {
-      max-width: 960px;
-    }
-  }
-  
-
-  @media (min-width: 1200px) {
-    .container {
-      max-width: 1140px;
-    }
-  }
-
-
-
-  @media (max-width: 816px) {
-    .navbar .navbar-header h4 {
-      font-size: 1.05rem;
-    }
-  }
-
-
-
-
-  
 
   
 /* MAIN */
@@ -250,9 +202,6 @@ body > main > section {
     display:flex;
     flex-direction: column;
 
-}
-
-main > section > div {
 }
 
 main > section h1 {
@@ -695,3 +644,18 @@ input[type='checkbox']:checked + label > span:before{
     transform: translate3d(0,-.5em,0) rotate(45deg);
   }
 }
+
+/*@media*/
+
+@media screen and (max-width: 850px) {
+  main {
+		flex-direction: column;
+	}
+  main > aside {
+    margin-left: 0px;
+		border-left: 0;
+    margin-top: 10px;   
+	}
+}
+
+  
