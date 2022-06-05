@@ -113,7 +113,7 @@ const movieTemplate = (movieDetail) => {
 		<div class="media-content">
 		  <div class="content">
 			<h1>${movieDetail.Title}</h1>
-			<h4>${movieDetail.Genre}</h4>
+			<h4 style="text-align: left">${movieDetail.Genre}</h4>
 			<p>${movieDetail.Plot}</p>
 		  </div>
 		</div>
