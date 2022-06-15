@@ -91,7 +91,8 @@ function check() {
         nick.classList.contains('form_input--error') ||
         title.classList.contains('form_input--error') ||
         date.classList.contains('form_input--error') ||
-        tresc.classList.contains('form_input--error')
+        tresc.classList.contains('form_input--error') ||
+        (nick.value == '' || title.value == '' || tresc.value == '')
     ) {} else {
         dodaj();
     }
