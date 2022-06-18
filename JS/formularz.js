@@ -56,30 +56,22 @@ document.addEventListener('input', function anon() {
     }
 });
 
-class Wpis {
-    constructor(nick = '', tytul = '', data = new Date(), tresc = '') {
-        this.nick = nick;
-        this.tytul = tytul;
-        this.data = data;
-        this.tresc = tresc;
-    }
-
-    pokaz() {
-        return 'Wpis: nick: ' + this.nick + ' Tytuł: ' + this.tytul + ' Data: ' + this.data + ' Treść = ' + this.tresc;
-    }
+function getWpis() {
+    return JSON.parse(localStorage.getItem('wpisy') || '[]');
 }
 
-function dodaj() {
-    wpis = new Wpis();
+function setWpis(wpisy) {
+    localStorage.setItem('wpisy', JSON.stringify(wpisy));
+}
 
-    wpis.nick = document.querySelector('#nick').value;
-    wpis.tytul = document.querySelector('#title').value;
-    wpis.data = document.querySelector('#dataPublikacji').value;
-    wpis.tresc = document.querySelector('#tresc').value;
-
-    wpisJSON = JSON.stringify(wpis);
-
-    sessionStorage.setItem(`${document.querySelector('#title').value}`, wpisJSON);
+function dodaj(wpisy, nick, tytul, data, tresc) {
+    wpisy.push({
+        nick: nick,
+        tytul: tytul,
+        data: data,
+        tresc: tresc
+    });
+    return true;
 }
 
 function check() {
@@ -94,6 +86,10 @@ function check() {
         tresc.classList.contains('form_input--error') ||
         (nick.value == '' || title.value == '' || tresc.value == '')
     ) {} else {
-        dodaj();
+        let wpisy = getWpis();
+        if (dodaj(wpisy, nick.value, title.value, date.value, tresc.value)) {
+            setWpis(wpisy);
+            window.location = 'wpisy.html';
+        }
     }
 }

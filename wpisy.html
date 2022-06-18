@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
-    <link rel="stylesheet" href="CSS/style.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"/> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+
     <title>Movieabout</title>
 </head>
 
-<body style="display: inline;">
+<body>
 
     <nav class="navbar">
         <div class="navbar-header">
@@ -61,30 +62,54 @@
         </script>
     </nav>
 
-    <div class="container">
-        <div class="columns">
-            <div class="column">
-                <div id="left-autocomplete"></div>
-                <div id="left-summary"></div>
-            </div>
+    <div id="actual-body">
+        <div id="wpisy" class="enrty-section">
 
-            <div class="column">
-                <div id="right-autocomplete"></div>
-                <div id="right-summary"></div>
-            </div>
-        </div>
-
-        <div class="column is-half notification is-primary tutorial">
-            <h1 class="title">Wyszukaj Filmy Po Obu Stronach</h1>
-            <p class="subtitle">Powiemy ci który jest najlepszy!</p>
         </div>
     </div>
-    <script src="JS/utils.js"></script>
-    <script src="JS/autocomplete.js"></script>
-    <script src="JS/index.js"></script>
 
-    <footer class="absoluteFooter">&copy; Bartek Noga</footer>
+    <div class="overlay" id="divOne">
+        <div class="wrapper">
+            <h2>Edytuj Wpis</h2>
+            <a href="#" class="close">&times;</a>
+            <div class="content">
+                <div class="cont">
+                    <form class="form">
+                        <div class="form_item"> <label for="nick" class="form_label">Podaj nick:</label>
+                            <input type="text" class="form_input" name="nick" id="nick" placeholder="Podaj swój nick" required>
+                            <span class="form_error">Nazwa użytkownika jest za krótka</span></div>
 
+                        <div class="form_item"> <label for="title" class="form_label">Tytuł wpisu:</label>
+                            <input type="text" class="form_input" name="title" id="title" placeholder="Tytuł wpisu" required>
+                            <span class="form_error">Tytuł wpisu jest za krótki</span></div>
+
+                        <div class="form_item">
+                            <label for="dataPublikacji" class="form_label"> Data publikacji:</label>
+                            <input type="date" class="form_input form_input--small" name="dataPublikacji" id="dataPublikacji" required>
+                            <span class="form_error">Data nie może być z przeszłości</span>
+                        </div>
+
+                        <div class="form_item">
+                            <label for="tresc" class="form_label">Treść wpisu:</label>
+                            <textarea maxlength="500" class="form_input" name="tresc" id="tresc" placeholder="Wpisz tresć wpisu (max. 500 liter)" required></textarea>
+                            <span class="form_error">Treść za krótka</span>
+                        </div>
+
+                        <div class="form_item">
+                            <button class="form_btn" type="submit">Zatwierdź</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>&copy; Bartek Noga</footer>
 </body>
+<script src="JS/dodajWpis.js"></script>
 
 </html>

@@ -644,3 +644,86 @@ input[type='checkbox']:checked+label>span:before {
         margin-top: 10px;
     }
 }
+
+
+/* Wpisy */
+
+.enrty-section {
+    flex-grow: 1;
+    background: #eceef3;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    margin: 3vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.952rem;
+    min-height: 90vh;
+}
+
+.enrty-section h3,
+h5,
+h6 {
+    padding: 1vh;
+}
+
+.enrty-section h1 {
+    text-align: center;
+    line-height: 200px;
+}
+
+.enrty-section a {
+    color: darkred;
+    margin-left: 1vh;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.08);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: scroll;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.wrapper {
+    margin: 70px auto;
+    padding: 10px;
+    background: #e7e7e7;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.wrapper h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.wrapper .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.wrapper .content {
+    max-height: 30%;
+    overflow: auto;
+}
