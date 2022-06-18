@@ -93,3 +93,46 @@ function check() {
         }
     }
 }
+
+function update() {
+    let element = document.getElementById('wpisy-aside');
+    element.innerHTML = '';
+    let wpisy = getWpis().reverse();
+    let empty = document.createElement('h2');
+    empty.appendChild(document.createTextNode('Pusto tu, dodaj pierwszy wpis!'));
+    element.appendChild(empty);
+    if (wpisy.length !== 0) {
+        element.removeChild(empty);
+    }
+
+    for (let i = 0; i < wpisy.length; i++) {
+        let wpis = wpisy[i];
+
+        const entry = document.createElement('div');
+        entry.classList.add('wpis-entry');
+        //tytul
+        let title = document.createElement('h3');
+        title.classList.add('entry-title');
+        title.appendChild(document.createTextNode(wpis.tytul));
+        entry.appendChild(title);
+        //nick
+        let nick = document.createElement('h5');
+        nick.classList.add('entry-nick');
+        nick.appendChild(document.createTextNode('Dodane przez: ' + wpis.nick));
+        entry.appendChild(nick);
+        //date
+        let date = document.createElement('h6');
+        date.classList.add('entry-date');
+        date.appendChild(document.createTextNode(wpis.data));
+        entry.appendChild(date);
+        //tresc
+        let tresc = document.createElement('h5');
+        tresc.classList.add('entry-tresc');
+        tresc.appendChild(document.createTextNode(wpis.tresc));
+        entry.appendChild(tresc);
+        element.appendChild(entry);
+        element.appendChild(document.createElement('br'));
+    }
+}
+
+update();

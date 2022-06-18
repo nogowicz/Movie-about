@@ -23,10 +23,12 @@ function update() {
     let empty = document.createElement('h1');
     empty.appendChild(document.createTextNode('Pusto tu, dodaj pierwszy wpis!'));
     element.appendChild(empty);
+    if (wpisy.length !== 0) {
+        element.removeChild(empty);
+    }
 
     for (let i = 0; i < wpisy.length; i++) {
         let wpis = wpisy[i];
-        element.removeChild(empty);
         const entry = document.createElement('div');
         entry.classList.add('wpis-entry');
         //tytul
