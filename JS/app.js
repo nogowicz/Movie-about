@@ -1,23 +1,20 @@
-const images = document.querySelectorAll('.image-container img');
-
-let i = 0;
-let j = 8;
-
-function next() {
-	document.getElementById('content' + (i + 1)).classList.remove('active');
-	i = (j + i + 1) % j;
-	document.getElementById('content' + (i + 1)).classList.add('active');
-	if (i == 0) {
-		document.getElementById('content' + 1).classList.add('active');
-	}
-}
-
-function prev() {
-	document.getElementById('content' + (i + 1)).classList.remove('active');
-	i = (j + i - 1) % j;
-	document.getElementById('content' + (i + 1)).classList.add('active');
-}
-
+var counter = 1;
 setInterval(function() {
-	next();
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if (counter > 9) {
+        counter = 1;
+    }
 }, 5000);
+
+let counts = setInterval(updated);
+let upto = 19478100;
+
+function updated() {
+    var count = document.getElementById('counter');
+    upto += 100;
+    count.innerHTML = upto;
+    if (count.innerHTML == 19500000) {
+        clearInterval(counts);
+    }
+}
