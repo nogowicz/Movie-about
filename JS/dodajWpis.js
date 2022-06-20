@@ -80,7 +80,7 @@ function update() {
             nick.disabled = true;
             title.value = wpis.tytul;
             title.disabled = true;
-            date.value = wpis.data;
+            date.valueAsDate = new Date();
             date.disabled = true;
             tresc.value = wpis.tresc;
             const button = document.querySelector('.form_btn');

@@ -70,11 +70,11 @@
                 <h1>Dodaj wpis</h1><br><br>
                 <form class="form">
                     <div class="form_item"> <label for="nick" class="form_label">Podaj nick:</label>
-                        <input type="text" class="form_input" name="nick" id="nick" placeholder="Podaj swój nick" required>
+                        <input maxlength="20" type="text" class="form_input" name="nick" id="nick" placeholder="Podaj swój nick (max. 20 znaków)" required>
                         <span class="form_error">Nazwa użytkownika jest za krótka</span></div>
 
                     <div class="form_item"> <label for="title" class="form_label">Tytuł wpisu:</label>
-                        <input type="text" class="form_input" name="title" id="title" placeholder="Tytuł wpisu" required>
+                        <input maxlength="100" type="text" class="form_input" name="title" id="title" placeholder="Tytuł wpisu (max. 100 znaków)" required>
                         <span class="form_error">Tytuł wpisu jest za krótki</span></div>
 
                     <div class="form_item">
@@ -85,7 +85,7 @@
 
                     <div class="form_item">
                         <label for="tresc" class="form_label">Treść wpisu:</label>
-                        <textarea maxlength="500" class="form_input" name="tresc" id="tresc" placeholder="Wpisz tresć wpisu (max. 500 liter)" required></textarea>
+                        <textarea maxlength="500" class="form_input" name="tresc" id="tresc" placeholder="Wpisz tresć wpisu (max. 500 znaków)" required></textarea>
                         <span class="form_error">Treść za krótka</span>
                     </div>
 

@@ -76,11 +76,11 @@
                 <div class="cont">
                     <form class="form">
                         <div class="form_item"> <label for="nick" class="form_label">Podaj nick:</label>
-                            <input type="text" class="form_input" name="nick" id="nick" placeholder="Podaj swój nick" required>
+                            <input maxlength="20" type="text" class="form_input" name="nick" id="nick" placeholder="Podaj swój nick" required>
                             <span class="form_error">Nazwa użytkownika jest za krótka</span></div>
 
                         <div class="form_item"> <label for="title" class="form_label">Tytuł wpisu:</label>
-                            <input type="text" class="form_input" name="title" id="title" placeholder="Tytuł wpisu" required>
+                            <input maxlength="50" type="text" class="form_input" name="title" id="title" placeholder="Tytuł wpisu" required>
                             <span class="form_error">Tytuł wpisu jest za krótki</span></div>
 
                         <div class="form_item">
@@ -109,7 +109,8 @@
 
 
     <footer>&copy; Bartek Noga</footer>
+    <script src="JS/dodajWpis.js"></script>
 </body>
-<script src="JS/dodajWpis.js"></script>
+
 
 </html>

@@ -670,6 +670,10 @@ h6 {
     padding: 1vh;
 }
 
+h6 {
+    font-weight: bold;
+}
+
 .enrty-section h1 {
     text-align: center;
     line-height: 200px;
@@ -703,9 +707,8 @@ h6 {
     padding: 10px;
     background: #e7e7e7;
     border-radius: 5px;
-    width: 30%;
+    width: 450px;
     position: relative;
-    transition: all 5s ease-in-out;
 }
 
 .wrapper h2 {
