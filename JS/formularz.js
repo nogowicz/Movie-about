@@ -1,3 +1,4 @@
+const button = document.querySelector('.form_btn');
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.form_input').forEach(function(input) {
         input.addEventListener('input', function() {
@@ -12,9 +13,11 @@ document.addEventListener('input', function nickValidate() {
     if (nick.value.length < 3) {
         nick.addEventListener('input', function() {
             nick.classList.add('form_input--error');
+            button.disabled = true;
         });
     } else {
         nick.classList.remove('form_input--error');
+        button.disabled = false;
     }
 });
 
@@ -23,9 +26,11 @@ document.addEventListener('input', function titleValidate() {
     if (title.value.length < 3) {
         title.addEventListener('input', function() {
             title.classList.add('form_input--error');
+            button.disabled = true;
         });
     } else {
         title.classList.remove('form_input--error');
+        button.disabled = false;
     }
 });
 
@@ -34,8 +39,10 @@ document.addEventListener('input', function dateValidator() {
     var today = new Date();
     if (today.getDate() > date.valueAsDate.getDate()) {
         date.classList.add('form_input--error');
+        button.disabled = true;
     } else {
         date.classList.remove('form_input--error');
+        button.disabled = false;
     }
 });
 
@@ -44,9 +51,11 @@ document.addEventListener('input', function textValidate() {
     if (tresc.value.length < 3 || tresc.value.length > 500) {
         tresc.addEventListener('input', function() {
             tresc.classList.add('form_input--error');
+            button.disabled = true;
         });
     } else {
         tresc.classList.remove('form_input--error');
+        button.disabled = false;
     }
 });
 

@@ -90,6 +90,7 @@ function update() {
                 });
                 setWpis(newWpis);
                 update();
+
                 if (
                     nick.classList.contains('form_input--error') ||
                     title.classList.contains('form_input--error') ||
@@ -117,46 +118,16 @@ function update() {
     }
 }
 
-document.addEventListener('input', function nickValidate() {
-    const nick = document.querySelector('#nick');
-    if (nick.value.length < 3) {
-        nick.addEventListener('input', function() {
-            nick.classList.add('form_input--error');
-        });
-    } else {
-        nick.classList.remove('form_input--error');
-    }
-});
-
-document.addEventListener('input', function titleValidate() {
-    const title = document.querySelector('#title');
-    if (title.value.length < 3) {
-        title.addEventListener('input', function() {
-            title.classList.add('form_input--error');
-        });
-    } else {
-        title.classList.remove('form_input--error');
-    }
-});
-
-document.addEventListener('input', function dateValidator() {
-    var date = document.querySelector('#dataPublikacji');
-    var today = new Date();
-    if (today.getDate() > date.valueAsDate.getDate()) {
-        date.classList.add('form_input--error');
-    } else {
-        date.classList.remove('form_input--error');
-    }
-});
-
 document.addEventListener('input', function textValidate() {
     const tresc = document.querySelector('#tresc');
     if (tresc.value.length < 3 || tresc.value.length > 500) {
         tresc.addEventListener('input', function() {
             tresc.classList.add('form_input--error');
+            button.disabled = true;
         });
     } else {
         tresc.classList.remove('form_input--error');
+        button.disabled = false;
     }
 });
 
