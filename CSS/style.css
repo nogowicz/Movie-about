@@ -669,9 +669,11 @@ input[type='checkbox']:focus+label>span {
     background: rgba(255, 255, 255, .1);
 }
 
+
+/* 
 input[type='checkbox']:checked+label>ins {
     height: 100%;
-}
+} */
 
 input[type='checkbox']:checked+label>span {
     border: .5em solid #66f;
@@ -681,8 +683,8 @@ input[type='checkbox']:checked+label>span {
 input[type='checkbox']:checked+label>span:before {
     content: "";
     position: absolute;
-    top: .6em;
-    left: .2em;
+    top: .4em;
+    left: .1em;
     border-right: 3px solid transparent;
     border-bottom: 3px solid transparent;
     transform: rotate(45deg);
@@ -1032,14 +1034,4 @@ h6 {
 .wrapper .content {
     max-height: 30%;
     overflow: auto;
-}
-
-.wpis-entry {
-    width: 90%;
-    padding: 30px;
-    margin: 0 auto;
-    margin-top: 40px;
-    border-radius: 7px;
-    background: #fff;
-    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
 }

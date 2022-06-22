@@ -1,5 +1,6 @@
-const button = document.querySelector('.form_btn');
 document.addEventListener('DOMContentLoaded', function() {
+    // const button = document.querySelector('.form_btn');
+    // button.disabled = true;
     document.querySelectorAll('.form_input').forEach(function(input) {
         input.addEventListener('input', function() {
             input.className = input.className.replace(/form_input--error ?/, '');
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('input', function nickValidate() {
     const nick = document.querySelector('#nick');
+
     if (nick.value.length < 3) {
         nick.addEventListener('input', function() {
             nick.classList.add('form_input--error');
@@ -39,10 +41,8 @@ document.addEventListener('input', function dateValidator() {
     var today = new Date();
     if (today.getDate() > date.valueAsDate.getDate()) {
         date.classList.add('form_input--error');
-        button.disabled = true;
     } else {
         date.classList.remove('form_input--error');
-        button.disabled = false;
     }
 });
 
@@ -51,11 +51,9 @@ document.addEventListener('input', function textValidate() {
     if (tresc.value.length < 3 || tresc.value.length > 500) {
         tresc.addEventListener('input', function() {
             tresc.classList.add('form_input--error');
-            button.disabled = true;
         });
     } else {
         tresc.classList.remove('form_input--error');
-        button.disabled = false;
     }
 });
 

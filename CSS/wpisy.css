@@ -1,0 +1,9 @@
+.wpis-entry {
+    width: 90%;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
